@@ -45,10 +45,8 @@ def cyclic(gene_one, gene_two):
         while cycles[pos] < 0:
             cycles[pos] = cycle_no
             pos = lookup[gene_two[pos]]
-    print(cycles)
 
     for cycle in cycles:
-        print(cycle)
         gene_one[cycle] = gene_two[gene_one[cycle]]
     return gene_one, gene_two
 
