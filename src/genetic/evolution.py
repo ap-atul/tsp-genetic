@@ -17,7 +17,6 @@ class GeneticSolver:
 
         for g in range(gen_size + 1):
             pop = sorted(pop, key= lambda gene: self._fitness_func(gene), reverse=self._rev)
-            
             if (x := self._fitness_func(pop[0])) < best_fit:
                 best_fit, best_sol = x, pop[0]
 
